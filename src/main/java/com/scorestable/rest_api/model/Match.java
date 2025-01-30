@@ -21,18 +21,16 @@ import java.util.Objects;
 
         @Size(min = 1, max = 20)
         private String title;
-        private String author;
-        private String isbn;
+        private String score;
 
         // No-argument constructor
         public Match() {
         }
 
         // All-argument constructor (optional, for convenience)
-        public Match(String title, String author, String isbn) {
+        public Match(String title, String score) {
             this.title = title;
-            this.author = author;
-            this.isbn = isbn;
+            this.score = score;
         }
 
         // Getters and setters
@@ -52,15 +50,12 @@ import java.util.Objects;
             this.title = title;
         }
 
-        public String getAuthor() {
-            return author;
+        public String getScore() {
+            return score;
         }
 
-        public void setAuthor(String author) {
-            this.author = author;
+        public void setScore(String score) {
+            this.score = score;
         }
 
-        public String getIsbn() {
-            return isbn;
-        }
     }
