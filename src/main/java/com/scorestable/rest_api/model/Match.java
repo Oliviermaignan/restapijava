@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Size;
+
 import java.util.Objects;
 
 
@@ -17,6 +19,7 @@ import java.util.Objects;
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
+        @Size(min = 1, max = 20)
         private String title;
         private String author;
         private String isbn;
